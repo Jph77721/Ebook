@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Sabedoria Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Resetar margem e padding para evitar espaços extras */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Estilo da página de produtos */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Título da página */
+    h1 {
+      font-size: 28px;
+      color: #fff;
+      background-color: #006400; /* Verde escuro */
+      padding: 20px 0;
+      margin: 0; /* Remover qualquer margem do título */
+      width: 100%; /* Garantir que o título ocupe toda a largura */
+      position: fixed; /* Fixa o título no topo da tela */
+      top: 0; /* Coloca o título no topo */
+      left: 0;
+      z-index: 10; /* Garante que o título fique sobre outros elementos */
+    }
+
+    /* Adicionar um pequeno espaçamento após o título */
+    .content {
+      margin-top: 100px; /* Adiciona margem superior para o conteúdo abaixo do título */
+    }
+
+    .produtos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .produto {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .produto img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .produto h3 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .produto p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .produto .preco {
+      font-size: 18px;
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .produto button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .produto button:hover {
+      background-color: #218838;
+    }
+
+    .formas-pagamento {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .formas-pagamento img {
+      width: 50px;
+      height: auto;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    /* Estilo para as imagens abaixo dos produtos (uma abaixo da outra) */
+    .imagens-adicionais {
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .imagens-adicionais img {
+      width: 100%; /* Faz as imagens ocuparem toda a largura disponível */
+      height: auto;
+      margin-bottom: 20px; /* Espaçamento entre as imagens */
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Produtos - Sabedoria Online</h1>
+
+  <div class="content">
+    <div class="produtos-container">
+      <!-- Produto 1 -->
+      <div class="produto">
+        <img src="https://i.ibb.co/CMywTVn/Fun-Earth-Day-Coloring-Activity-for-Kids-20241117-032654-0000.jpg" alt="Produto 1">
+        <h3>Planeta Encantado</h3>
+        <p>Embarque em uma jornada mágica pelo Planeta Encantado! Descubra lições valiosas sobre a natureza e como podemos cuidar do nosso mundo de forma divertida e educativa. Ideal para crianças!</p>
+        <p class="preco">R$ 12,99</p>
+        <button onclick="window.location.href='link-do-produto1.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto">
+        <img src="https://i.ibb.co/5RwKwC7/Capa-para-E-book-Marketing-digital-simples-preto-e-lil-s-20241117-033511-0000.jpg" alt="Produto 2">
+        <h3>Marketing Digital</h3>
+        <p>Transforme suas ideias em lucros com nosso e-book de Marketing Digital! Aprenda estratégias práticas, ferramentas poderosas e como alcançar o sucesso online de forma eficaz.</p>
+        <p class="preco">R$ 17,99</p>
+        <button onclick="window.location.href='link-do-produto2.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="produto">
+        <img src="produto3.jpg" alt="Produto 3">
+        <h3>Nome do Produto 3</h3>
+        <p>Descrição do produto 3.</p>
+        <p class="preco">R$ 149,99</p>
+        <button onclick="window.location.href='link-do-produto3.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="produto">
+        <img src="produto4.jpg" alt="Produto 4">
+        <h3>Nome do Produto 4</h3>
+        <p>Descrição do produto 4.</p>
+        <p class="preco">R$ 89,99</p>
+        <button onclick="window.location.href='link-do-produto4.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="produto">
+        <img src="produto5.jpg" alt="Produto 5">
+        <h3>Nome do Produto 5</h3>
+        <p>Descrição do produto 5.</p>
+        <p class="preco">R$ 129,99</p>
+        <button onclick="window.location.href='link-do-produto5.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 6 -->
+      <div class="produto">
+        <img src="produto6.jpg" alt="Produto 6">
+        <h3>Nome do Produto 6</h3>
+        <p>Descrição do produto 6.</p>
+        <p class="preco">R$ 169,99</p>
+        <button onclick="window.location.href='link-do-produto6.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 7 -->
+      <div class="produto">
+        <img src="produto7.jpg" alt="Produto 7">
+        <h3>Nome do Produto 7</h3>
+        <p>Descrição do produto 7.</p>
+        <p class="preco">R$ 79,99</p>
+        <button onclick="window.location.href='link-do-produto7.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 8 -->
+      <div class="produto">
+        <img src="produto8.jpg" alt="Produto 8">
+        <h3>Nome do Produto 8</h3>
+        <p>Descrição do produto 8.</p>
+        <p class="preco">R$ 199,99</p>
+        <button onclick="window.location.href='link-do-produto8.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 9 -->
+      <div class="produto">
+        <img src="produto9.jpg" alt="Produto 9">
+        <h3>Nome do Produto 9</h3>
+        <p>Descrição do produto 9.</p>
+        <p class="preco">R$ 249,99</p>
+        <button onclick="window.location.href='link-do-produto9.html'">Comprar</button>
+      </div>
+
+      <!-- Produto 10 -->
+      <div class="produto">
+        <img src="produto10.jpg" alt="Produto 10">
+        <h3>Nome do Produto 10</h3>
+        <p>Descrição do produto 10.</p>
+        <p class="preco">R$ 89,99</p>
+        <button onclick="window.location.href='link-do-produto10.html'">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Seção de imagens adicionais (uma abaixo da outra) -->
+    <div class="imagens-adicionais">
+      <img src="https://i.ibb.co/fpjb0LV/Picsart-24-11-17-02-47-07-332.png" alt="Imagem 1">
+      <img src="https://i.ibb.co/C7gD4tM/Logo-pix-powered-by-Banco-Central-Brazil-2020.png" alt="Imagem 2">
+    </div>
+<!-- Seção com fundo preto -->
+<section style="background-color: black; color: white; padding: 20px; text-align: center;">
+    <div style="margin-bottom: 30px;">
+        <h3 style="letter-spacing: 2px;">EMPRESA</h3>
+        <ul style="padding-left: 0; list-style-type: none;">
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Sobre a empresa</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Pagamento e segurança</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Prazos de Envio e Entrega</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Termos de Uso</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Trocas e Devoluções</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Política de Privacidade</a></li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <h3 style="letter-spacing: 2px;">AJUDA</h3>
+        <ul style="padding-left: 0; list-style-type: none;">
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Minha Conta</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <h3 style="letter-spacing: 2px;">SIGA</h3>
+        <ul style="padding-left: 0; list-style-type: none;">
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Facebook</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Twitter</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Instagram</a></li>
+            <li style="margin: 10px 0; letter-spacing: 1px;"><a href="#">Youtube</a></li>
+        </ul>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <h3 style="letter-spacing: 2px;">FALE CONOSCO</h3>
+        <p style="letter-spacing: 1px;">Whatsapp: <a href="tel:+5584996190827">(84) 99619-0827</a></p>
+    </div>
+
+    <div>
+        <p style="letter-spacing: 1px;">© Sabedoria Online – Todos os direitos reservados 2024</p>
+    </div>
+</section>
+
+<!-- Estilos CSS -->
+<style>
+    section a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    section a:hover {
+        text-decoration: underline;
+    }
+
+    section h3 {
+        margin-top: 20px;
+    }
+
+    section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    section ul li {
+        margin: 10px 0;
+    }
+</style>
+      <p>&copy; 2024 Sabedoria Online - Todos os direitos reservados</p>
+    </footer>
+  </div>
+
+</body>
+</html>
