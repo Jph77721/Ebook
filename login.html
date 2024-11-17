@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Sabedoria Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sabedoria Online</h1>
+  </header>
+
+  <section id="login">
+    <h2>Login</h2>
+    <form id="form-login" action="final.html">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+      
+      <button type="submit" id="btn-login" disabled>Login</button>
+    </form>
+    <p id="mensagem-erro" style="color: red; display: none;">E-mail ou senha incorretos. Tente novamente.</p>
+  </section>
+
+  <script>
+    // Obtém os parâmetros do URL
+    const params = new URLSearchParams(window.location.search);
+    const emailCadastrado = params.get('email');
+    const senhaCadastrada = params.get('senha');
+
+    // Seleciona elementos do formulário
+    const emailInput = document.getElementById('email');
+    const senhaInput = document.getElementById('senha');
+    const loginButton = document.getElementById('btn-login');
+    const mensagemErro = document.getElementById('mensagem-erro');
+
+    // Obtém os dados do LocalStorage
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || {};
+
+    // Preenche os campos automaticamente
+    if (emailCadastrado && senhaCadastrada) {
+      emailInput.value = emailCadastrado;
+      senhaInput.value = senhaCadastrada;
+    }
+
+    // Valida os campos de login
+    function validarLogin() {
+      const email = emailInput.value.trim();
+      const senha = senhaInput.value.trim();
+
+      if (usuarios[email] === senha) {
+        loginButton.disabled = false;
+        mensagemErro.style.display = "none";
+      } else {
+        loginButton.disabled = true;
+        mensagemErro.style.display = "block"; // Mostra mensagem de erro
+      }
+    }
+
+    // Eventos para validar enquanto o cliente digita
+    emailInput.addEventListener('input', validarLogin);
+    senhaInput.addEventListener('input', validarLogin);
+
+    // Validação inicial ao carregar a página
+    validarLogin();
+  </script>
+</body>
+</html>
